@@ -32,3 +32,11 @@ sumdat <- gapminder_unfiltered %>%
   arrange(year)
 ```
 
+# Code Edit - Mbeasle2
+Scatterplot of year, max life expectancy - color coded by country and add OLS line
+```{r}
+ggplot(data = sumdat, mapping = aes(x = year, y = lifeExp, color = country)) +
+  geom_point() +
+  geom_smooth(method = 'lm',, formula = y ~ x, se = FALSE)
+```
+
